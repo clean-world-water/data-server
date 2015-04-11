@@ -15,4 +15,4 @@ libraryDependencies ++= Seq(
   javaWs
 )
 
-libraryDependencies += "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
+libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.24"

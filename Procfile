@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/pure_water_mapper -Dhttp.port=${PORT} -DapplyEvolutions.default=true -Ddb.default.driver=org.postgresql.Driver -Ddb.default.url=${DATABASE_URL} -Ddb.default.user=vcgupqkwgimgdf -Ddb.default.password=caF6A_3vnWskW3l7oM6A5l3VQ7
+web: target/universal/stage/bin/pure_water_mapper -Dhttp.port=${PORT} -DapplyEvolutions.default=true -Ddb.default.driver=com.mysql.jdbc.Driver -Ddb.default.url=${DATABASE_URL} -Ddb.default.user=b8fa659bc6aced -Ddb.default.password=08ca0b10
