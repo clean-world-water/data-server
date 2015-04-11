@@ -12,7 +12,9 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
   cache,
-  javaWs,
-  "com.typesafe.slick" %% "slick" % "1.0.0",
-  "mysql" % "mysql-connector-java" % "5.1.35;"
+  javaWs
 )
+
+libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.35"
+
+libraryDependencies += "com.typesafe.slick" % "slick_2.11" % "2.1.0"
