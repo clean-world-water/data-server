@@ -1,0 +1,15 @@
+# User Inputs
+
+- !!models.UserInput
+    id:         1
+    createdAt:  2015-04-12
+    updatedAt:  2015-04-12
+    version:    1
+    lat:        35.673343
+    lon:        139.710388
+    waterQualityMeasurement:    0
+    waterMeasurementTool:    pH sensor
+    waterInfrastructure: something
+    waterSourceImageURL: url here
+    waterInfrastructureImageURL: url here2
+    

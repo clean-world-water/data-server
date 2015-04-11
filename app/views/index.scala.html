@@ -1,7 +1,39 @@
-@(message: String)
+@(userInputs:List[UserInput])
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+    <header>
+    	<hgroup>
+    		<h1> Dashboard</h1>
+    		<h2>User Inputs</h2>
+    	</hgroup>
+    </header>
+    
+    <article>
+    <table>
+    	<tr>
+	    	<th>Id</th>
+	    	<th>Lat</th>
+	    	<th>Lon</th>
+	    	<th>QualityMeasurement</th>
+	    	<th>MeasurementTool</th>
+	    	<th>Infrastructure</th>
+	    	<th>SourceImageURL</th>
+	    	<th>InfrastructureImageURL</th>
+    	</tr>
+    	@userInputs.map { userInput =>
+    		<tr>
+	    		<td>@userInput.id</td>
+	    		<td>@userInput.lat</td>
+	    		<td>@userInput.lon</td>
+	    		<td>@userInput.waterQualityMeasurement</td>
+	    		<td>@userInput.waterMeasurementTool</td>
+	    		<td>@userInput.waterInfrastructure</td>
+	    		<td>@userInput.waterSourceImageURL</td>
+	    		<td>@userInput.waterInfrastructureImageURL</td>
+    		</tr>
+    	}
+    	</table>
+    </article>
 
 }
