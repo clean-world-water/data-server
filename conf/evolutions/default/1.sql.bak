@@ -4,7 +4,7 @@
 # --- !Ups
 
 create table user_input (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   created_at                timestamp,
   updated_at                timestamp,
   lat                       double,
@@ -18,6 +18,8 @@ create table user_input (
   constraint pk_user_input primary key (id))
 ;
 
+create sequence user_input_seq;
+
 
 
 
@@ -28,4 +30,6 @@ SET REFERENTIAL_INTEGRITY FALSE;
 drop table if exists user_input;
 
 SET REFERENTIAL_INTEGRITY TRUE;
+
+drop sequence if exists user_input_seq;
 

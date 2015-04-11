@@ -14,7 +14,7 @@ import play.db.ebean.Model;
 public class UserInput extends Model {
 
 	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	public Long id;
 
 	public Date createdAt;
