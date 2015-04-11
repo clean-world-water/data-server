@@ -14,6 +14,7 @@ import play.db.ebean.Model;
 public class UserInput extends Model {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Long id;
 
 	public Date createdAt;
@@ -30,7 +31,7 @@ public class UserInput extends Model {
 	public String waterSourceImageURL;
 	public String waterInfrastructureImageURL;
 
-	public static Finder<Integer, UserInput> find = new Finder<>(Integer.class,
+	public static Finder<Long, UserInput> find = new Finder<>(Long.class,
 			UserInput.class);
 
 	public static UserInput create(Double lat, Double lon, String wqm,
