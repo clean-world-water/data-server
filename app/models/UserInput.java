@@ -23,9 +23,8 @@ public class UserInput extends Model {
 
 	@Version
 	public int version;
-
-	public Double lat;
-	public Double lon;
+	public Float lat;
+	public Float lon;
 	public String waterQualityMeasurement;
 	public String waterMeasurementTool;
 	public String waterInfrastructure;
@@ -36,7 +35,7 @@ public class UserInput extends Model {
 	public static Finder<Integer, UserInput> find = new Finder<>(Integer.class,
 			UserInput.class);
 
-	public static UserInput create(Double lat, Double lon, String wqm,
+	public static UserInput create(Float lat, Float lon, String wqm,
 			String wmt, String wi, String wsiUrl, String wiiUrl) {
 		UserInput ui = new UserInput();
 		ui.lat = lat;
