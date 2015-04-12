@@ -1,15 +1,15 @@
 package controllers;
 
+import static play.data.Form.form;
+
+import java.util.Date;
 import java.util.List;
 
 import models.RetrieveForm;
 import models.UserInput;
-import play.data.Form;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.index;
-import static play.data.Form.*;
 
 public class UserInputs extends Controller {
 
@@ -33,8 +33,10 @@ public class UserInputs extends Controller {
 				.get();
 		System.out.println(rf.lat);
 		System.out.println(rf.lon);
+		System.out.println(rf.startAt);
 
 		List<UserInput> findList = UserInput.find.where()
+				.between("createdAt", rf.startAt, new Date())
 				.setFirstRow(rf.offset).setMaxRows(rf.limit).findList();
 
 		return ok(Json.toJson(findList));
