@@ -35,7 +35,7 @@ public class UserInputs extends Controller {
 		System.out.println(rf.lon);
 		System.out.println(rf.startAt);
 
-		List<UserInput> findList = UserInput.find.where()
+		List<UserInput> findList = UserInput.find.orderBy("createdAt").where()
 				.between("createdAt", rf.startAt, new Date())
 				.setFirstRow(rf.offset).setMaxRows(rf.limit).findList();
 
