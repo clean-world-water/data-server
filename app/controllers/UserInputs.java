@@ -29,8 +29,12 @@ public class UserInputs extends Controller {
 
 	public static Result retrive() {
 
-		RetrieveForm rf = form(RetrieveForm.class).bindFromRequest(request())
-				.get();
+		RetrieveForm rf = new RetrieveForm();
+		try {
+			rf = form(RetrieveForm.class).bindFromRequest(request()).get();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		System.out.println(rf.lat);
 		System.out.println(rf.lon);
 		System.out.println(rf.startAt);
